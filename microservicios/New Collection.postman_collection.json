@@ -1,0 +1,148 @@
+{
+	"info": {
+		"_postman_id": "2c2e28b5-01b7-4f99-a963-2ef2ba12d736",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21782747"
+	},
+	"item": [
+		{
+			"name": "localhost:8080/compraproducto/envios/creaenvio",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombreProducto\": \"Samsung S22 Ultra\",\r\n    \"url\": \"mercadolibre.com\",\r\n    \"origen\": \"Armina\",\r\n    \"destino\": \"Armenia\",\r\n    \"nombreRemitente\": \"Juan Manuel\",\r\n    \"cc\": 1094958430,\r\n    \"reclamo\": \"no registra reclamo\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/compraproducto/envios/creaenvio",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"compraproducto",
+						"envios",
+						"creaenvio"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/compraproducto/envios/cancelaelenvio/4",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idVenta\": 7,\r\n    \"url\": \"mercadolibre.com\",\r\n    \"verDetalle\": \"Compra Samsung S22 en Armenia\",\r\n    \"buzonJustificacion\": \"Cancelo pedido porque se demoró en la entrega\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/compraproducto/envios/cancelaelenvio/7",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"compraproducto",
+						"envios",
+						"cancelaelenvio",
+						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/compraproducto/envios/actualizaenvio/1682485154256",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"numeroSeguimiento\": 1682485154256,\r\n    \"estadoEnvio\": \"Reparto\",\r\n    \"fechaEnvio\": \"2023-04-26\",\r\n    \"informacionSeguimiento\": \"En reparto, fecha de entrega confirmada\",\r\n    \"direccionEnvio\": \"Armenia\",\r\n    \"costoEnvio\": \"10000\",\r\n    \"reclamo\": \"no registra reclamo\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/compraproducto/envios/actualizaenvio/1682485154256",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"compraproducto",
+						"envios",
+						"actualizaenvio",
+						"1682485154256"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/compraproducto/envios/8",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/compraproducto/envios/8",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"compraproducto",
+						"envios",
+						"8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/compraproducto/envios/incidenciaenvio",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"numeroSeguimiento\": 1682485154256,\r\n    \"estadoEnvio\": \"Reparto\",\r\n    \"reclamo\": \"no me a llegado mi artículo malandros tenia que ser\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/compraproducto/envios/incidenciaenvio",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"compraproducto",
+						"envios",
+						"incidenciaenvio"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
