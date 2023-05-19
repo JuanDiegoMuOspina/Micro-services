@@ -5,6 +5,7 @@ import javax.persistence.*;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import io.swagger.v3.oas.annotations.Hidden;
 import lombok.Getter;
@@ -36,7 +37,7 @@ public class Envio {
     @NotNull
     private Long cc;
     @Hidden
-    @JsonManagedReference
+    @JsonIgnore
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "estado_envio_id", referencedColumnName = "id")
     private EstadoEnvio estadoEnvio;

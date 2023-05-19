@@ -76,7 +76,7 @@ public class EnvioController {
 
     // Cancelar envío
     @DeleteMapping("/cancelaelenvio/{idVenta}")
-    public ResponseEntity<CancelarEnvio> cancelarEnvio(@PathVariable @Parameter(description = "ID del envío a cancelar", required = true, example = "1")Long idVenta, @RequestBody CancelarEnvio cancelarEnvio) {
+    public ResponseEntity<CancelarEnvio> cancelarEnvio(@PathVariable @Parameter(description = "ID del envío a cancelar", required = true, example = "2")Long idVenta, @RequestBody CancelarEnvio cancelarEnvio) {
         Envio envio = envioService.findById(idVenta);
         if (envio == null) {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);

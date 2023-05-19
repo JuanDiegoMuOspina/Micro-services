@@ -13,11 +13,7 @@
       
   <modules>
             
-    <module>dockers</module>
-            
-    <module>microprofile</module>
-            
-    <module>autenticacion</module>
+
           
     <module>microprofile-cucumber-test</module>
       
